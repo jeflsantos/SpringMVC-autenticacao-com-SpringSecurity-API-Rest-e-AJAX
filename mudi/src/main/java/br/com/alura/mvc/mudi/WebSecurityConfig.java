@@ -22,8 +22,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.and()
 		.formLogin(form -> form
 			.loginPage("/login")
-			.permitAll()
-			);
+			.permitAll().defaultSuccessUrl("/home", true)
+		)
+		.logout(logout -> logout.logoutUrl("/logout"));
 	}
 
 	@Bean
@@ -31,8 +32,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public UserDetailsService userDetailsService() {
 		UserDetails user =
 			 User.withDefaultPasswordEncoder()
-				.username("joao")
-				.password("joao")
+				.username("jeff")
+				.password("jeff")
 				.roles("ADM")
 				.build();
 

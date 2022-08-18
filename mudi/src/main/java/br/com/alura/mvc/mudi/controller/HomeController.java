@@ -15,13 +15,13 @@ import br.com.alura.mvc.mudi.model.StatusPedido;
 import br.com.alura.mvc.mudi.repository.PedidoRepository;
 
 @Controller
+@RequestMapping("/home")
 public class HomeController {
 	
 	@Autowired
 	private PedidoRepository pedidoRepository;
 	
-	@GetMapping
-	@RequestMapping("/home")
+	@GetMapping()
 	public String home(Model model) {
 		List<Pedido> pedidos = pedidoRepository.findAll();
 		model.addAttribute("pedidos", pedidos);
