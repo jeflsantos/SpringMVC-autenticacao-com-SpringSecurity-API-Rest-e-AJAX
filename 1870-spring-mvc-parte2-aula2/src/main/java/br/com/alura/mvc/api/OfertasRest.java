@@ -28,6 +28,7 @@ public class OfertasRest {
 		}
 		
 		Pedido pedido = pedidoBuscado.get();
+		
 		Oferta nova = requisicao.toOferta();
 		nova.setPedido(pedido);
 		pedido.getOfertas().add(nova);
