@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import br.com.alura.mvc.model.Oferta;
+import br.com.alura.mvc.mudi.model.Oferta;
 
 public class RequisicaoNovaOferta {
 

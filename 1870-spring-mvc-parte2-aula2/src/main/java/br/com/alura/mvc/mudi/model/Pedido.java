@@ -15,8 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import br.com.alura.mvc.model.Oferta;
-
 @Entity
 public class Pedido {
 	
